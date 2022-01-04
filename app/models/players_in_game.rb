@@ -1,0 +1,2 @@
+class PlayersInGame < ApplicationRecord
+end
