@@ -1,2 +1,4 @@
 class QuestionsInGame < ApplicationRecord
+
+
 end
