@@ -33,9 +33,9 @@ class UserController < ApplicationController
   end
 
   def enters
-    @user = User.find_by id params[:login]
+    @user = User.all.where("login = '#{params[:login]}'")
     if !@user.nil?
-      render json: { result: true, role_id: @user.role }, status: :ok
+      render json: @user, status: :ok
     else
       render json: { result: false }, status: :ok
     end
