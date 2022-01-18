@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+
   root 'welcome#index'
+
   #USERS
   get '/users', to: 'user#index'
   get '/admins', to: 'user#get_admin'
+  get '/users/enters', to: 'user#enters'
 
   post '/users', to: 'user#create'
   delete '/users/:id', to: 'user#destroy'
